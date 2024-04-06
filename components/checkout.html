@@ -1,0 +1,109 @@
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+            <h2>Your cart</h2>
+
+        </div>
+
+        <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-primary">Your cart</span>
+                    <span class="badge bg-primary rounded-pill">{{slCard}}</span>
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-sm" ng-repeat="itemCard in userCart">
+                        <div>
+                            <h6 class="my-0">{{itemCard.name}}</h6>
+                            <img style="    border-radius: 10px;
+                margin-top: 10px;
+                height: 80px;" src="{{itemCard.image}}" alt="">
+                            <button style="margin-left:105px;" class="btn btn-outline-danger mt-2"
+                                ng-click="handleRemoveCart(itemCard.id)">Remove</button>
+                        </div>
+                        <span class="text-muted">{{itemCard.price}}</span>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Total (USD)</span>
+                        <strong>${{totalPrice}}</strong>
+                    </li>
+                </ul>
+
+                <form class="card p-2">
+                    <div class="input-group">
+                        <a href="#!/"><button style="width: 373px;" type="submit"
+                                class="btn btn-secondary">Back</button></a>
+                    </div>
+                    <div class="input-group mt-3">
+                        <a href="#!/history-oder"><button style="width: 373px;" type="submit"
+                                class="btn btn-secondary">History Oders</button></a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Billing address</h4>
+                <form class="needs-validation" novalidate="">
+                    <div class="row g-3">
+
+
+                        <div class="col-12">
+                            <label for="Phone" class="form-label">Username <span
+                                    class="text-muted">(Optional)</span></label>
+                            <input ng-model="username" type="tel" class="form-control" id="username" placeholder="username">
+                            <span class="text-danger" style="font-weight: bold;">{{errorMsg.errorUser}}</span>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="Phone" class="form-label">Phone <span
+                                    class="text-muted">(Optional)</span></label>
+                            <input ng-model="phone" type="tel" class="form-control" id="phone" placeholder="Phone">
+                            <span class="text-danger" style="font-weight: bold;">{{errorMsg.errorPhone}}</span>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-12">
+                            <label for="address" class="form-label">Address</label>
+                            <input ng-model="address" type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                            <span class="text-danger" style="font-weight: bold;">{{errorMsg.errorAddress}}</span>
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
+                            </div>
+                        </div>
+
+
+
+                        <hr class="my-4">
+
+                        <h4 class="mb-3">Payment</h4>
+
+                        <div class="my-3">
+                            <select ng-model="paymentMethod" class="form-select" required>
+                                <option value="COD">Ship COD</option>
+                                <option value="QR">QR pay</option>
+                            </select>
+
+                            
+
+                            <span class="text-danger" style="font-weight: bold;">{{errorMsg.errorPayment}}</span>
+                            <hr class="my-4">
+
+                            <button ng-click="handlePayment()" class="w-100 btn btn-primary btn-lg" type="button">Continue to checkout</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 bg-dark mt-3 ">
+        <div class="container-fluid">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p>
+        </div>
+    </footer>
+</div>

@@ -1,0 +1,59 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
+        <!-- Removed "Start Bootstrap" brand -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!/allproduct">All Products</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="#!admin">Admin</a></li>
+                       
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <!-- Added "Login" and "Signup" buttons -->
+                <form class="d-flex">
+                    <input ng-model="search" class="form-control me-2" type="search" placeholder="Search Products" aria-label="Search">
+                  </form>
+
+
+                <button style="margin-left: 15px;" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="btn btn-outline-dark"
+                    type="submit">
+                    <i class="bi-cart-fill me-1"></i>
+                    <a href="#!/checkout"> Cart</a>
+                    <span id="slCard" class="badge bg-dark text-white ms-1 rounded-pill">{{slCard}}</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="row" >
+    <div class="col-3 mt-3" ng-repeat="product in listProduct | filter:search ">
+        <div class="card" style="width: 18rem;">
+            <img style="height: 300px;" src="{{product.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{product.name}}</h5>
+              <p class="card-text">{{product.price}}$</p>
+              <button type="button" ng-click="handleBuyCart(product.id)" class="btn btn-primary" >Add to cart</button>
+            </div>
+          </div>
+    </div>
+</div>
+<footer class="py-5 bg-dark mt-3">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p>
+    </div>
+</footer>

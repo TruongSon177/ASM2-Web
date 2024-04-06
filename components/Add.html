@@ -1,0 +1,36 @@
+<div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    Add Product
+                </div>
+                <div class="card-body">
+                    <form action="" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Product Name</label>
+                            <input ng-model="name" type="text" class="form-control" id="name" name="name">
+                            <span class="text-danger">{{errorMsg.errorName}}</span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Link Image</label>
+                            <input ng-model="link" type="text" class="form-control" id="image" name="image">
+                            <span class="text-danger">{{errorMsg.errorLink}}</span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Price</label>
+                            
+                            <input ng-model="price" type="number" class="form-control" id="price" name="price">
+                            <span class="text-danger">{{errorMsg.errorPrice}}</span>
+                           
+                        </div>
+                         <a href="#!/admin" class="btn btn-warning">Quay Lại</a>
+                        <button ng-click="handleAdd()" type="button" class="btn btn-primary">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

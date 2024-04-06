@@ -1,0 +1,185 @@
+{
+  "users": [
+    {
+      "id": "767",
+      "username": "sonadmin",
+      "password": "123456",
+      "phone": "0123456789",
+      "role": "admin",
+      "cart": []
+    },
+    {
+      "id": "9667",
+      "username": "sonnt",
+      "password": "123456",
+      "phone": "0999999999",
+      "role": "user",
+      "cart": [],
+      "orders": []
+    },
+    {
+      "id": "7030",
+      "username": "ngheungu",
+      "password": "123456",
+      "phone": "0999999999",
+      "role": "user",
+      "cart": [],
+      "orders": []
+    },
+    {
+      "id": "287",
+      "username": "truongson",
+      "password": "123456",
+      "phone": "0977713581",
+      "role": "user",
+      "cart": [],
+      "orders": []
+    }
+  ],
+  "products": [
+    {
+      "name": "Nike Air Force 1",
+      "price": 1009,
+      "image": "https://tse3.mm.bing.net/th?id=OIP.ST_OUoAR5BNtBzyLbHR7dwHaHa&pid=Api&P=0&h=220",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Nike Cortez OG",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.5pXNf8EGWNX4ewQHk7M9OAHaHa&pid=Api&P=0&h=220",
+      "price": 100,
+      "rating": 4
+    },
+    {
+      "id": "3",
+      "name": "Nike Court",
+      "image": "https://sneakerdaily.vn/wp-content/uploads/2024/01/2ead929028e383bddaf2.jpg.webp",
+      "price": 100.05,
+      "rating": 4
+    },
+    {
+      "id": "4",
+      "name": "Nike Jordan 1",
+      "image": "https://sneakerdaily.vn/wp-content/uploads/2024/01/Giay-Air-Jordan-1-Mid-GS-Gym-Red-Black-Toe-DQ8423-106-6.jpg.webp",
+      "price": 100.05,
+      "rating": 4
+    },
+    {
+      "id": "5",
+      "name": "Adidas Yeezy",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.fY0BeYRdik5f9Y-qGP-J5QHaFj&pid=Api&P=0&h=220",
+      "price": 100.05,
+      "rating": 4
+    },
+    {
+      "id": "6",
+      "name": "Adidas Superstar",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.xmrIKjCnf4WAnIJ6FfCIygHaHa&pid=Api&P=0&h=220",
+      "price": 100.05,
+      "rating": 4
+    },
+    {
+      "id": "7",
+      "name": "Converse Chuck Taylor",
+      "image": "https://vlpfashion.com/wp-content/uploads/2021/09/cac-mau-giay-converse-chuck-classic-dep-danh-cho-nam-nu.jpg",
+      "price": 100.05,
+      "rating": 4
+    },
+    {
+      "id": "8",
+      "name": "Converse Run Hike Star",
+      "image": "https://vlpfashion.com/wp-content/uploads/2021/09/giay-converse-run-hike-star-danh-cho-nam-nu.jpg",
+      "price": 100.05,
+      "rating": 4
+    },
+    {
+      "id": "9",
+      "name": "Vans Old",
+      "price": 200.5,
+      "image": "https://sneakerdaily.vn/wp-content/uploads/2022/03/Giay-Vans-Old-Skool-Black-Flame-VN0A38G1K681.jpg.webp"
+    }
+  ],
+  "orders": [
+    {
+      "id": "767",
+      "username": "aloo",
+      "phone": "0123456789",
+      "address": "aaaaaaaaa",
+      "payment": "QR",
+      "product-card": [
+        {
+          "id": "1",
+          "name": "Nike Air Force 1",
+          "image": "https://tse3.mm.bing.net/th?id=OIP.ST_OUoAR5BNtBzyLbHR7dwHaHa&pid=Api&P=0&h=220",
+          "price": 90.5,
+          "rating": 4
+        }
+      ],
+      "status": "Đã Xác Nhận"
+    },
+    {
+      "id": "9667",
+      "username": "sonnt",
+      "phone": "0999999999",
+      "address": "laocai",
+      "payment": "COD",
+      "product-card": [
+        {
+          "id": "2",
+          "name": "Nike Cortez OG",
+          "image": "https://tse4.mm.bing.net/th?id=OIP.5pXNf8EGWNX4ewQHk7M9OAHaHa&pid=Api&P=0&h=220",
+          "price": 100,
+          "rating": 4
+        },
+        {
+          "id": "3",
+          "name": "Nike Court",
+          "image": "https://sneakerdaily.vn/wp-content/uploads/2024/01/2ead929028e383bddaf2.jpg.webp",
+          "price": 100.05,
+          "rating": 4
+        }
+      ],
+      "status": "Đã Xác Nhận"
+    },
+    {
+      "id": "7030",
+      "username": "ngheungu",
+      "phone": "0999999999",
+      "address": "haiduong",
+      "payment": "COD",
+      "product-card": [
+        {
+          "id": "6",
+          "name": "Adidas Superstar",
+          "image": "https://tse2.mm.bing.net/th?id=OIP.xmrIKjCnf4WAnIJ6FfCIygHaHa&pid=Api&P=0&h=220",
+          "price": 100.05,
+          "rating": 4
+        }
+      ],
+      "status": "Đã Xác Nhận"
+    },
+    {
+      "id": "287",
+      "username": "truongson",
+      "phone": "0977713581",
+      "address": "laocai",
+      "payment": "COD",
+      "product-card": [
+        {
+          "id": "2",
+          "name": "Nike Cortez OG",
+          "image": "https://tse4.mm.bing.net/th?id=OIP.5pXNf8EGWNX4ewQHk7M9OAHaHa&pid=Api&P=0&h=220",
+          "price": 100,
+          "rating": 4
+        },
+        {
+          "id": "3",
+          "name": "Nike Court",
+          "image": "https://sneakerdaily.vn/wp-content/uploads/2024/01/2ead929028e383bddaf2.jpg.webp",
+          "price": 100.05,
+          "rating": 4
+        }
+      ]
+    }
+  ]
+}

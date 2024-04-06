@@ -8,6 +8,8 @@ window.OdersAll = function($scope, $http, $location, $timeout , $routeParams) {
         $location.path("/401");
     }
 
+ 
+
   
 
     let id = $routeParams.id;
@@ -63,6 +65,9 @@ window.OdersAll = function($scope, $http, $location, $timeout , $routeParams) {
         localStorage.removeItem("role")
         window.location.reload();
     }
+
+
+    
 
 
 

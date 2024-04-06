@@ -12,19 +12,9 @@
       "id": "9667",
       "username": "sonnt",
       "password": "123456",
-      "phone": "0999999999",
+      "phone": "0999988887",
       "role": "user",
-      "cart": [],
-      "orders": []
-    },
-    {
-      "id": "7030",
-      "username": "ngheungu",
-      "password": "123456",
-      "phone": "0999999999",
-      "role": "user",
-      "cart": [],
-      "orders": []
+      "cart": []
     },
     {
       "id": "287",
@@ -177,6 +167,22 @@
           "name": "Nike Court",
           "image": "https://sneakerdaily.vn/wp-content/uploads/2024/01/2ead929028e383bddaf2.jpg.webp",
           "price": 100.05,
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": "9667",
+      "username": "sonnt",
+      "phone": "0999999998",
+      "address": "asdasd",
+      "payment": "COD",
+      "product-card": [
+        {
+          "id": "2",
+          "name": "Nike Cortez OG",
+          "image": "https://tse4.mm.bing.net/th?id=OIP.5pXNf8EGWNX4ewQHk7M9OAHaHa&pid=Api&P=0&h=220",
+          "price": 100,
           "rating": 4
         }
       ]

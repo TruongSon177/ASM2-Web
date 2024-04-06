@@ -1,0 +1,113 @@
+
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+
+            <h1 class="display-4 fw-bolder">S Shop </h1>
+            <p class="lead fw-normal text-white-50 mb-0">We bring good things to life</p>
+        </div>
+    </div>
+</header>
+
+
+
+<style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: #F7F7F7;
+      color: #888;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #E27575;
+      padding: 10px;
+      text-align: center;
+      color: #FFF;
+    }
+    
+    main {
+      padding: 20px;
+    }
+    
+    form {
+      max-width: 600px;
+      margin: 0 auto;  
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 15px;  
+    }
+    
+    input,
+    textarea,
+    select {
+      width: 70%;
+      padding: 10px;
+    }
+    
+    input[type="submit"] {
+      background-color: #E27575;
+      color: #FFF;
+      cursor: pointer;
+    }
+</style>
+
+<div>
+    <h1>Contact Form</h1>
+</div>
+
+  <main>
+
+    <form ng-submit="submitForm()">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" ng-model="formData.name" required><br><br>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" ng-model="formData.email" required><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" ng-model="formData.message" rows="4" required></textarea><br><br>
+
+        <a  class="btn btn-success" href="#!/">Back</a>
+        <button class="btn btn-warning mt-3" type="submit">Submit</button>
+        
+    </form>
+  </main>
+
+
+  <footer class="bg-primary text-white text-center text-lg-start mt-3">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase d-flex justify-content-center">Footer Content</h5>
+  
+          <p class="text-center">
+          ADMIN : Nguyen Truong Son <br>
+          phone : 0977713581 <BR>
+          Email : Nguyensonabc5@gmail.com<br>
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <a style="color: white;" href="#!/sendmail"> Contact</a>
+          </div>
+        
+          </p>
+      
+       
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">S shop </a>
+    </div>
+    <!-- Copyright -->
+  </footer>

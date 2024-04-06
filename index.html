@@ -42,6 +42,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./controller/ListProduct.js"></script>
     <script src="./controller/Login.js"></script>
     <script src="./controller/Signup.js"></script>
@@ -77,7 +78,7 @@
             templateUrl: './components/checkout.html',
             controller: Checkout
         })
-        .when('/history-oder', {
+        .when('/profile', {
             templateUrl: './components/historyList.html',
             controller: ListProduct
         })
@@ -101,6 +102,11 @@
             templateUrl: './components/OdersAll.html',
             controller: OdersAll
         })
+        .when('/sendmail', {
+            templateUrl: './components/contact.html',
+            controller: ListProduct
+        })
+
         .otherwise({
             redirectTo: '/'
         });

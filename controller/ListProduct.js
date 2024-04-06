@@ -23,6 +23,44 @@ window.ListProduct = function ($scope, $http, $location) {
         localStorage.removeItem("role")
         window.location.reload();
     }
+    $scope.userData = []
+    let idNguoiDung = localStorage.getItem("id");
+    $http.get(`http://localhost:3000/users/${idNguoiDung}`)
+    .then((res) => {
+        $scope.username = res.data.username;
+        $scope.pass = res.data.password;
+        $scope.phone = res.data.phone
+        $scope.userData = res.data;
+    })
+
+    $scope.handleSaveChange = function() {
+        let idNguoiDung = localStorage.getItem("id");
+        
+        var updatedData = {
+            id: idNguoiDung,
+            username: $scope.userData.username, 
+            password: $scope.pass, 
+            phone: $scope.phone, 
+            role: $scope.userData.role,
+            cart: $scope.userData.cart
+        };
+    
+     
+        $http.put('http://localhost:3000/users/' + idNguoiDung, updatedData)
+            .then(function(response) {
+                alert("Cap nhap thanh cong")
+                console.log('Thông tin người dùng đã được cập nhật:', response.data);
+           
+            })
+            .catch(function(error) {
+                console.error('Lỗi khi cập nhật thông tin người dùng:', error);
+            });
+    }
+    
+
+
+
+  
 
     $scope.handleBuyCart = (productId) => {
         let userId = localStorage.getItem("id");
@@ -108,6 +146,33 @@ $http.get(apiUrl)
     .catch((error) => {
         console.error("Lỗi khi gọi API:", error);
     });
+
+
+
+    $scope.formData = {};
+
+    $scope.submitForm = function() {
+        sendEmail($scope.formData.name, $scope.formData.email, $scope.formData.message);
+        $scope.formData = {}; 
+    };
+
+    function sendEmail(name, email, message) {
+        Email.send({
+            SecureToken: "plsvbzaariwcyyet",
+            To: "nguyensonabc5@gmail.com",
+            From: email,
+            Subject: "New message from " + name,
+            Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message
+        }).then(
+            function(response) {
+                alert("Message sent successfully!");
+            },
+            function(error) {
+                alert("Error occurred while sending message.");
+                console.error(error);
+            }
+        );
+    }
 
 
 }
